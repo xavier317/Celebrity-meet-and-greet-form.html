@@ -1,0 +1,109 @@
+# Celebrity-meet-and-greet-form.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrity Meet and Greet Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    h1, p {
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Celebrity Meet and Greet Form</h1>
+  <p>Please fill out this form to register for a celebrity meet and greet event.</p>
+  <form action="/submit" method="POST">
+    <!-- Name -->
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required>
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Phone Number -->
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
+
+    <!-- Preferred Celebrity -->
+    <label for="celebrity">Preferred Celebrity:</label>
+    <select id="celebrity" name="celebrity" required>
+      <option value="" disabled selected>Select a celebrity</option>
+      <option value="celebrity1">Celebrity 1</option>
+      <option value="celebrity2">Celebrity 2</option>
+      <option value="celebrity3">Celebrity 3</option>
+    </select>
+
+    <!-- Event Date and Time -->
+    <label for="event-date">Event Date and Time:</label>
+    <input type="datetime-local" id="event-date" name="event-date" required>
+
+    <!-- Address -->
+    <label for="street-address">Street Address:</label>
+    <input type="text" id="street-address" name="street-address" required>
+
+    <label for="address-line-2">Street Address Line 2:</label>
+    <input type="text" id="address-line-2" name="address-line-2">
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="state">State/Province:</label>
+    <input type="text" id="state" name="state" required>
+
+    <label for="zip">Postal/Zip Code:</label>
+    <input type="text" id="zip" name="zip" required>
+
+    <!-- Number of Attendees -->
+    <label for="attendees">Number of Attendees:</label>
+    <input type="number" id="attendees" name="attendees" placeholder="e.g., 23" required>
+
+    <!-- Additional Requests -->
+    <label for="requests">Additional Requests:</label>
+    <textarea id="requests" name="requests" rows="4" placeholder="Enter any additional requests here"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+</body>
+      </html>
